@@ -177,10 +177,15 @@
 
 .MainItm .itm {
     display: flex;
+    align-items: center;
 }
 
 .MainItm .itm .txt {
     z-index: 999;
+    overflow: hidden;
+    width: 400px;
+    white-space: nowrap;
+    transition: width 1s;
 }
 
 .MainItm .itm .txt h3 {
@@ -197,13 +202,13 @@
 }
 
 .MainItm .swiper-slide-active .itm .txt {
-    display: none;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
 }
 
 .MainItm .itm figure img {
-    width: 500px;
-    animation: fg 1s 1s both;
-
+    width: 300px;
 }
 
 .MainItm .itm figure {
@@ -216,7 +221,8 @@
 
 .MainItm .swiper-slide-next .itm figure img {
     width: 300px;
-    transition: 1s 1s;
+    animation: fg 2s 1s both;
+
 }
 
 @keyframes fg {
